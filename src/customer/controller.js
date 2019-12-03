@@ -1,4 +1,4 @@
-import Customer, { findById, find } from "../models/customer";
+import Customer from "../models/customer";
 
 export const createNewCustomer = cust => {
     const newCustomer = new Customer(cust);
@@ -6,10 +6,10 @@ export const createNewCustomer = cust => {
 };
 
 export const getCustomerById = id => {
-    return findById(id);
+    return Customer.findById(id);
 };
 
 export const getCustomers = () => {
-    return find();
+    return Customer.find();
 }
 

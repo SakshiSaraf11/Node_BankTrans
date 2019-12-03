@@ -1,4 +1,4 @@
-import Transaction, { findById, find } from "../models/transaction";
+import Transaction from "../models/transaction";
 
 export const createNewTrans = trans => {
     const newTrans = new Transaction(trans)
@@ -6,10 +6,10 @@ export const createNewTrans = trans => {
 };
 
 export const getTransById = id => {
-    return findById(id);
+    return Transaction.findById(id);
 };
 
 export const getTrans = () => {
-    return find();
+    return Transaction.find();
 }
 

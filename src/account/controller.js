@@ -1,4 +1,4 @@
-import Account, { findById, find } from "../models/account";
+import Account from "../models/account";
 
 export const createNewAccount = acc => {
     const newAccount = new Account(acc)
@@ -6,10 +6,10 @@ export const createNewAccount = acc => {
 };
 
 export const getAccountById = id => {
-    return findById(id);
+    return Account.findById(id);
 };
 
 export const getAccount = () => {
-    return find();
+    return Account.find();
 }
 
